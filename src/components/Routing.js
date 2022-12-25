@@ -8,22 +8,28 @@ import {
 } from "react-router-dom";
 
 import Home from "./Home";
+import Login from "./Login";
+import AppBar from "./AppBar";
+import Dashboard from "../layout/dashboardLayout";
 
 function Routing() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Navigate to="/404" replace />} />
-        <Route
-          path="/404"
-          element={
-            <div>
-              <h1>404 Error</h1>
-            </div>
-          }
-        />
-      </Routes>
+      <Dashboard>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
+          <Route
+            path="/404"
+            element={
+              <div>
+                <h1>404 Error</h1>
+              </div>
+            }
+          />
+        </Routes>
+      </Dashboard>
     </Router>
   );
 }

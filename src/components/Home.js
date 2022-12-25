@@ -2,7 +2,7 @@ import axios from "axios";
 import Books from "./Stories";
 import { useState, useEffect } from "react";
 import Stories from "./Stories";
-import AppBar from "./AppBar";
+import BlogCardDemo from "./imported/Card.js";
 
 const API_URL = "http://localhost:3000/api/v1/stories.json";
 
@@ -22,8 +22,6 @@ function Home() {
 
   return (
     <div>
-      <AppBar />
-      <h1>Hellow</h1>
       <Stories stories={stories} />
     </div>
   );

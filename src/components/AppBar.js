@@ -42,7 +42,7 @@ const FooterBadge = styled(Badge)`
 
 const AppBar = (props) => {
   return (
-    <MuiAppBar position="fixed" style={{ background: "#ffffff" }}>
+    <MuiAppBar position="sticky" style={{ background: "#ffffff" }}>
       <Toolbar>
         <Brand to="/home" button disableGutters={true}>
           <Tooltip title={"Logo"}>
