@@ -14,7 +14,8 @@ function ContentWrapper(props) {
         height: "auto",
       }}
     >
-      <Box p={3}>{props.children}</Box>
+      {/* <Box p={3}>{props.children}</Box> */}
+      {props.children}
     </div>
   );
 }

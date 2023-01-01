@@ -4,7 +4,6 @@ import React from "react";
 import cx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import CardContent from "@material-ui/core/CardContent";
-// import { useBlogTextInfoContentStyles } from "@mui-treasury/styles/textInfoContent/blog";
 import { useOverShadowStyles } from "@mui-treasury/styles/shadow/over";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Typography, Avatar, Grid, CardActionArea } from "@material-ui/core";
@@ -74,16 +73,14 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   },
 }));
 
-export const BlogCardDemo = React.memo(function BlogCard() {
+function BlogCard(props) {
   const styles = useStyles();
-  // const { button: buttonStyles, ...contentStyles } =
-  //   useBlogTextInfoContentStyles();
   const shadowStyles = useOverShadowStyles();
   return (
     <CardActionArea className={cx(styles.root, shadowStyles.root)}>
       <Grid container spacing={1}>
         <Grid item xs={2} align="center">
-          <Avatar className={styles.avatar}>R</Avatar>
+          <Avatar className={styles.avatar}>M</Avatar>
         </Grid>
         <Grid item xs={8} align="left">
           <Typography component="div" variant="body1">
@@ -110,34 +107,20 @@ export const BlogCardDemo = React.memo(function BlogCard() {
       <CardContent className={styles.content}>
         <Grid item align="left">
           <Typography component="div" variant="h6" className={styles.title}>
-            What is Git ?
+            {props.title} What is Git ?
           </Typography>
           <Typography variant="body2" component="div">
-            A paragraph is a series of sentences that are organized and
-            coherent, and are all related to a single topic.This is because
+            {props.body} A paragraph is a series of sentences that are organized
+            and coherent, and are all related to a single topic.This is because
             paragraphs show a reader where the subdivisions of an essay begin
             and end, and thus help the reader see the organization of the essay
             and grasp its main points. Git is a distributed version control
             system. Every dev has a working copy of the code and...
           </Typography>
         </Grid>
-        {/* <CardMedia
-          className={styles.media}
-          image={
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2000px-Git_icon.svg.png"
-          }
-        />
-        <TextInfoContent
-          classes={contentStyles}
-          // overline={"28 MAR 2019"}
-          body={
-            "Git is a distributed version control system. Git is a distributed version control system. Git is a distributed version control system. Git is a distributed version control system. Every dev has a working copy of the code and..."
-          }
-        />
-        <Button className={buttonStyles}>Read more</Button> */}
       </CardContent>
     </CardActionArea>
   );
-});
+}
 
-export default BlogCardDemo;
+export default BlogCard;

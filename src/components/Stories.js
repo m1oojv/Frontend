@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Box, Grid, Card } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 import Avatar from "@mui/material/Avatar";
 import { green } from "@mui/material/colors";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import BlogCardDemo from "./imported/Card";
 
 import ContentWrapper from "./ContentWrapper";
-import StoryCard from "./StoryCard";
+import BlogCard from "./Card";
 
 function Stories(props) {
   return (
@@ -16,20 +16,23 @@ function Stories(props) {
         <Grid item xs={4}></Grid>
         <Grid item xs={7}> */}
       <h1>Stories</h1>
-      <ContentWrapper>
-        <Grid container spacing={10} justifyContent="center">
-          {props.stories.map((story) => {
-            return (
-              <Grid item sx={6}>
-                <div key={story.id}>
-                  {/* <StoryCard title={story.title} body={story.body} /> */}
-                  <BlogCardDemo />
-                </div>
-              </Grid>
-            );
-          })}
-        </Grid>
-      </ContentWrapper>
+      {/* <ContentWrapper> */}
+
+      {props.stories.map((story) => {
+        return (
+          <Grid container spacing={6} justifyContent="center" key={story.id}>
+            <Grid item xs={3}></Grid>
+            <Grid item xs={6}>
+              <Box>
+                <BlogCard title={story.title} body={story.body} />
+              </Box>
+            </Grid>
+            <Grid item xs={3}></Grid>
+          </Grid>
+        );
+      })}
+
+      {/* </ContentWrapper> */}
       {/* </Grid>
       </Grid> */}
     </div>
