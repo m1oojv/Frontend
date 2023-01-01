@@ -19,6 +19,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     position: "relative",
     marginLeft: "auto",
     overflow: "initial",
+    maxWidth: 800,
     background: "#ffffff",
     alignItems: "center",
     [breakpoints.up("md")]: {
@@ -42,7 +43,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
       marginTop: spacing(-2),
       transform: "translateX(-8px)",
     },
-    "&:hover": {
+    "&:after": {
       content: '" "',
       position: "absolute",
       top: 0,

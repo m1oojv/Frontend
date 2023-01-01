@@ -8,34 +8,34 @@ import BlogCardDemo from "./imported/Card";
 
 import ContentWrapper from "./ContentWrapper";
 import BlogCard from "./Card";
+import Filter from "./Filter";
 
 function Stories(props) {
   return (
-    <div>
-      {/* <Grid container spacing={4}>
-        <Grid item xs={4}></Grid>
-        <Grid item xs={7}> */}
-      <h1>Stories</h1>
-      {/* <ContentWrapper> */}
-
-      {props.stories.map((story) => {
-        return (
-          <Grid container spacing={6} justifyContent="center" key={story.id}>
-            <Grid item xs={3}></Grid>
-            <Grid item xs={6}>
-              <Box>
-                <BlogCard title={story.title} body={story.body} />
-              </Box>
-            </Grid>
-            <Grid item xs={3}></Grid>
-          </Grid>
-        );
-      })}
-
-      {/* </ContentWrapper> */}
-      {/* </Grid>
-      </Grid> */}
-    </div>
+    <Grid
+      container
+      spacing={10}
+      justifyContent="center"
+      style={{ paddingTop: "40px" }}
+    >
+      <Grid item xs={2}>
+        <Filter />
+      </Grid>
+      <Grid item xs={6}>
+        <h1>Stories</h1>
+        <Grid container spacing={3} justifyContent="center">
+          {props.stories.map((story) => {
+            return (
+              <Grid item xs={12}>
+                <Box key={story.id}>
+                  <BlogCard title={story.title} body={story.body} />
+                </Box>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Grid>
+    </Grid>
   );
 }
 
