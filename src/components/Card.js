@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import CardContent from "@material-ui/core/CardContent";
 import { useOverShadowStyles } from "@mui-treasury/styles/shadow/over";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import { Typography, Avatar, Grid, CardActionArea } from "@material-ui/core";
 import { red } from "@mui/material/colors";
 
@@ -67,7 +68,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     width: 45,
   },
   title: {
-    color: "#ffb09f",
+    color: red[200],
     fontWeight: "bold",
     align: "left",
   },
@@ -82,20 +83,33 @@ function BlogCard(props) {
         <Grid item xs={2} align="center">
           <Avatar className={styles.avatar}>M</Avatar>
         </Grid>
-        <Grid item xs={8} align="left">
+        <Grid item xs={7} align="left">
           <Typography component="div" variant="body1">
             Megan Loo
           </Typography>
-          <Typography variant="body2" component="div">
+          <Typography
+            variant="body2"
+            component="div"
+            style={{ color: "#9e9e9e" }}
+          >
             September 14, 2016
           </Typography>
         </Grid>
-        <Grid item xs={2} style={{ paddingTop: "15px" }}>
-          <Grid container spacing={1} alignItems="center">
+
+        <Grid item xs={3} style={{ paddingTop: "15px" }} align="right">
+          <Grid container spacing={4} alignItems="center">
+            <Grid item xs={1}>
+              <ChatBubbleOutlineIcon />
+            </Grid>
+            <Grid item xs={1} style={{ paddingBottom: "20px" }}>
+              <Typography component="div" variant="subtitle1">
+                15
+              </Typography>
+            </Grid>
             <Grid item xs={1}>
               <FavoriteBorderIcon />
             </Grid>
-            <Grid item xs={6} style={{ paddingBottom: "9px" }}>
+            <Grid item xs={1} style={{ paddingBottom: "20px" }}>
               <Typography component="div" variant="subtitle1">
                 15
               </Typography>
