@@ -9,11 +9,12 @@ import {
 } from "@material-ui/core";
 
 import AppBar from "../components/AppBar";
+import NavBar from "../components/NavBar";
 
 const Dashboard = ({ children, routes, width }) => {
   return (
     <div>
-      <AppBar />
+      <NavBar />
       <MuiPaper>{children}</MuiPaper>
     </div>
   );

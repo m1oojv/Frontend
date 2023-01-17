@@ -17,7 +17,7 @@ function Routing() {
     <Router>
       <Dashboard>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<Navigate to="/404" replace />} />
           <Route

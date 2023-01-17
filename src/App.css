@@ -1,3 +1,42 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
 .App {
   text-align: center;
 }
@@ -34,5 +73,115 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+/* @font-face {
+  font-family: 'BebasNeueRegular';
+  src: url(./fonts/BebasNeueRegular.otf) format('opentype');
+} */
+
+/* @font-face {
+  font-family: "BebasNeueRegular";
+  src: url(./fonts/BebasNeueRegular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "BebasNeueBold";
+  src: url(./fonts/BebasNeueBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "BebasNeueThin";
+  src: url(./fonts/BebasNeueThin.ttf) format("truetype");
+} */
+
+::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.underlined-text {
+  text-decoration: underline !important;
+}
+
+.underlined-text:active {
+  text-decoration: underline !important;
+}
+
+/* youtube embed */
+.youtube-embed,
+.youtube-embed-2,
+.youtube-embed-3 {
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.youtube-embed-playing {
+  /* Calculated using the grid paddings */
+  /* maxWidth: 83.3%, (100-83.3)/2=8.335vw, 10px is padding*/
+  left: calc(-8.335vw - 10px);
+  top: 0;
+  position: absolute;
+  height: 56.25vw;
+  width: 100vw;
+}
+
+.youtube-embed-2-playing {
+  /* Calculated using the grid paddings */
+  left: calc(-11vw + 1px);
+  top: 0;
+  position: absolute;
+  height: 56.25vw;
+  width: 100vw;
+}
+
+.youtube-embed-3-playing {
+  /* Calculated using the grid paddings */
+  left: calc(-8.335vw - 10px);
+  top: 0;
+  position: absolute;
+  height: 56.25vw;
+  width: 100vw;
+}
+
+.youtube-embed-transitions {
+  transition: all 0.2s ease-in-out;
+}
+
+/* faq */
+@keyframes faq-expand-animation {
+  0% {
+    font-size: 1em;
+  }
+  80% {
+    font-size: 1.3em;
+  }
+  90% {
+    font-size: 1.35em;
+  }
+  100% {
+    font-size: 1.3em;
+  }
+}
+
+/* hide scrollbar on mobile */
+@media (max-width: 900px) {
+  ::-webkit-scrollbar {
+    display: none;
   }
 }

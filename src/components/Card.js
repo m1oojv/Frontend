@@ -9,6 +9,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import { Typography, Avatar, Grid, CardActionArea } from "@material-ui/core";
 import { red } from "@mui/material/colors";
+import theme from "../utils/Theme.js";
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -43,7 +44,7 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
       marginTop: spacing(-2),
       transform: "translateX(-8px)",
     },
-    "&:after": {
+    "&:hover": {
       content: '" "',
       position: "absolute",
       top: 0,
@@ -64,12 +65,12 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
     textTransform: "initial",
   },
   avatar: {
-    backgroundColor: red[500],
+    backgroundColor: theme.palette.tertiary.main,
     height: 45,
     width: 45,
   },
   title: {
-    color: red[200],
+    color: theme.palette.tertiary.main,
     fontWeight: "bold",
     align: "left",
   },
