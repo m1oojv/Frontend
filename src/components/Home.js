@@ -2,7 +2,6 @@ import axios from "axios";
 import Books from "./Stories";
 import { useState, useEffect } from "react";
 import Stories from "./Stories";
-import BlogCardDemo from "./imported/Card.js";
 
 const API_URL = "http://localhost:3002/api/v1/stories.json";
 

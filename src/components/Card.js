@@ -8,7 +8,6 @@ import { useOverShadowStyles } from "@mui-treasury/styles/shadow/over";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import { Typography, Avatar, Grid, CardActionArea } from "@material-ui/core";
-import { red } from "@mui/material/colors";
 import theme from "../utils/Theme.js";
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Box, List, ListItemButton, Slide } from "@mui/material";
-// import AccountIcon from "./AccountIcon.jsx";
+import AccountIcon from "./AccountIcon.js";
 // import Cart from "./Cart.jsx";
 import { slug } from "../utils/Utils.js";
 import { Text } from "../utils/Typography.js";
@@ -204,8 +204,8 @@ function NavBar({ refetchCounter, pageIndex, currPage }) {
         )}
       </List>
       <List sx={{ display: "flex", alignItems: "center" }}>
-        {/* <Cart refetchCounter={refetchCounter} />
-        <AccountIcon /> */}
+        {/* <Cart refetchCounter={refetchCounter} /> */}
+        <AccountIcon />
       </List>
     </Box>
   );

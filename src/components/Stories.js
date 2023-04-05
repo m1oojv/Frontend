@@ -4,7 +4,6 @@ import { Box, Grid, Paper } from "@material-ui/core";
 import Avatar from "@mui/material/Avatar";
 import { green } from "@mui/material/colors";
 import AssignmentIcon from "@mui/icons-material/Assignment";
-import BlogCardDemo from "./imported/Card";
 
 import ContentWrapper from "./ContentWrapper";
 import BlogCard from "./Card";

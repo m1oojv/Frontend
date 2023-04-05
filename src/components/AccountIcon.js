@@ -2,12 +2,12 @@ import React, { useState } from "react";
 
 import { Button, IconButton, Menu, MenuItem } from "@mui/material";
 import { AccountCircle } from "@mui/icons-material";
-import { useAuth } from "./GAuth.jsx";
-import { Text } from "../utils/Typography.jsx";
-import Snackbar from "./Snackbar.jsx";
+// import { useAuth } from "./GAuth.js";
+import { Text } from "../utils/Typography.js";
+import Snackbar from "./Snackbar.js";
 
 function AccountIcon() {
-  const { userInfo, loggedIn, login, logout, snackbars } = useAuth();
+  //   const { userInfo, loggedIn, login, logout, snackbars } = useAuth();
   const [anchorEl, setAnchorEl] = useState(null);
 
   const menuItems = [
@@ -17,7 +17,8 @@ function AccountIcon() {
     },
   ];
 
-  if (loggedIn) {
+  //   if (loggedIn) {
+  if (false) {
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
       setAnchorEl(event.currentTarget);
@@ -29,9 +30,9 @@ function AccountIcon() {
     return (
       <>
         <Snackbar
-          snackbarOpen={snackbars.showLoginSnackbar}
-          setSnackbarOpen={snackbars.setShowLoginSnackbar}
-          message={`Logged in as ${userInfo}`}
+        //   snackbarOpen={snackbars.showLoginSnackbar}
+        //   setSnackbarOpen={snackbars.setShowLoginSnackbar}
+        //   message={`Logged in as ${userInfo}`}
         />
         <div>
           <IconButton
@@ -73,7 +74,7 @@ function AccountIcon() {
             })}
             <MenuItem
               onClick={() => {
-                logout(true);
+                // logout(true);
                 handleClose();
               }}
             >
@@ -87,12 +88,12 @@ function AccountIcon() {
     return (
       <>
         <Snackbar
-          snackbarOpen={snackbars.showLogoutSnackbar}
-          setSnackbarOpen={snackbars.setShowLogoutSnackbar}
-          message="Logged out"
+        //   snackbarOpen={snackbars.showLogoutSnackbar}
+        //   setSnackbarOpen={snackbars.setShowLogoutSnackbar}
+        //   message="Logged out"
         />
         <Button
-          onClick={login}
+          //   onClick={login}
           variant="outlined"
           color="secondary"
           sx={{
@@ -105,7 +106,9 @@ function AccountIcon() {
             },
           }}
         >
-          <Text color="inherit">Login</Text>
+          <Text color="inherit" fontSize="12px">
+            Login
+          </Text>
         </Button>
       </>
     );
